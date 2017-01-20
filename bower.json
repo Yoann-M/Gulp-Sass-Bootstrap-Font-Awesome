@@ -1,0 +1,19 @@
+{
+  "name": "gulp-sass-bootstrap-font-awesome",
+  "version": "0.0.1",
+  "authors": [
+    "Yoann M"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "^3.3.7",
+    "font-awesome": "^4.7.0"
+  }
+}
