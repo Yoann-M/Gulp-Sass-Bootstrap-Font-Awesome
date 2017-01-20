@@ -43,9 +43,11 @@ var autoprefixerOptions = {
   ]
 };
 
+
 //-----------------------------------------------------------------------
 // GULP INIT     
 //-----------------------------------------------------------------------
+
 
 gulp.task('bootstrap-saas', function(){
 
@@ -68,7 +70,6 @@ gulp.task('bootstrap-saas', function(){
 
 gulp.task('bootstrap-variables', function(){
     
-  
     fs.stat(sassPath+'_custom-variables.scss', function(err, stat) {
         if(err != null) {
 
@@ -83,7 +84,6 @@ gulp.task('bootstrap-variables', function(){
     });
     
 });
-
 
 gulp.task('bootstrap-icons', function(){
     
@@ -134,6 +134,7 @@ gulp.task('init', ['bootstrap-saas','bootstrap-variables', 'bootstrap-icons', 'f
 // SASS CONVERSION     
 //-----------------------------------------------------------------------
 
+
 gulp.task('sass', function(){
     
     return gulp
@@ -174,6 +175,7 @@ gulp.task('serve', ['sass'], function () {
 //-----------------------------------------------------------------------
 // GULP BUILD
 //-----------------------------------------------------------------------
+
 
 // Delete all images in /prod/img/ for clean
 gulp.task('step1-clean', function () {
