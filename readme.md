@@ -5,11 +5,16 @@ Installation
 --------------------------
 
 1. REPOSITORY
-   * $ cd repository
+   
+* $ cd repository
+   
 2. BOWER
-   * $ bower install
+
+* $ bower install
+   
 3. NPM
-   * $ npm install
+
+* $ npm install
 
 
 Init project
