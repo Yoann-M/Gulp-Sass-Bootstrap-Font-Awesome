@@ -15,7 +15,7 @@ Installation
 Init project
 -----------------
 
-Add Bootstrap 3 and Font Awesome to yo project
+Add Bootstrap 3 and Font Awesome to your project
 
 * $ gulp init
 
@@ -53,6 +53,6 @@ APP STRUCTURE
     * -- app.js <- Modify this !
   * -- sass
     * -- app.scss <- Modify this !
-  * -- img  <- Add image and folder image !
+  * -- img  <- Add images and folders image !
   * -- fonts  <- Add fonts files !
   * -- bower_components  <- Dont modify, all bower components
