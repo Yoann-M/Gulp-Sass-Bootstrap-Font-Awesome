@@ -44,20 +44,25 @@ Minify images, css and js files.. And all of other files in prod/
 Dependencies included in the project
 ------------------------------------
 
-* bootstrap 3
+* Bootstrap Sass V3
 * Font Awesome
 
 
 APP STRUCTURE
 -------------------
 
-
 * app
   * -- index.html <- Modify this !
   * -- js
-    * -- app.js <- Modify this !
+    * -- app.js <- Modify this
   * -- sass
-    * -- app.scss <- Modify this !
-  * -- img  <- Add images and folders image !
-  * -- fonts  <- Add fonts files !
+    * -- app.scss <- Modify this
+    * -- custom <- Add yours customs sass files here
+        * -- _bootstrap-variables.scss <- Modify this
+    * -- bootstrap  <- Dont modify
+    * -- font-awesome <- Dont modify
+  * -- img  <- Add images and folders image
+  * -- fonts  <- Add yours fonts files here
+    * -- font-awesome fonts files
+    * -- bootstrap fonts files
   * -- bower_components  <- Dont modify, all bower components
