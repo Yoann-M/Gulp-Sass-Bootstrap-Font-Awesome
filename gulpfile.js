@@ -5,7 +5,6 @@ var watch       = require('gulp-watch');
 var browserSync = require('browser-sync').create();
 var reload      = browserSync.reload;
 // COMPRESSOR
-var concat      = require('gulp-concat');
 var uglify      = require('gulp-uglify');
 var cleanCSS    = require('gulp-clean-css');
 var imagemin    = require('gulp-imagemin');
