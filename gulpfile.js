@@ -51,7 +51,7 @@ var autoprefixerOptions = {
 
 gulp.task('bootstrap-saas', function(){
 
-    fs.stat(sassPath+'_bootstrap.scss', function(err, stat) {
+    fs.stat(sassPath+'bootstrap/', function(err, stat) {
         if(err != null) {
     
             return gulp
@@ -61,7 +61,7 @@ gulp.task('bootstrap-saas', function(){
               '!'+bootstrapStylePath+'_bootstrap-sprockets.scss',
               bootstrapStylePath+'**'
             ])
-            .pipe(gulp.dest(appPath+'sass'))
+            .pipe(gulp.dest(appPath+'sass/bootstrap/'))
             ;
         }
     });
@@ -70,15 +70,15 @@ gulp.task('bootstrap-saas', function(){
 
 gulp.task('bootstrap-variables', function(){
     
-    fs.stat(sassPath+'_custom-variables.scss', function(err, stat) {
+    fs.stat(sassPath+'custom/', function(err, stat) {
         if(err != null) {
 
             return gulp
             .src(bootstrapStylePath+'bootstrap/_variables.scss')
             .pipe(rename({
-                basename: "_custom-variables"
+                basename: "_bootstrap-variables"
             }))
-            .pipe(gulp.dest(appPath+'sass'))
+            .pipe(gulp.dest(appPath+'sass/custom/'))
             ;
         }
     });
@@ -99,14 +99,14 @@ gulp.task('bootstrap-icons', function(){
     
 });
 
-gulp.task('fontawesome-style', function(){
-    
-    fs.stat(appPath+'/css/font-awesome.css', function(err, stat) {
+gulp.task('fontawesome-sass', function(){
+
+    fs.stat(sassPath+'font-awesome/', function(err, stat) {
         if(err != null) {
     
             return gulp
-            .src(fontawesomePath+'css/font-awesome.css')
-            .pipe(gulp.dest(appPath+'css/'));
+            .src(fontawesomePath+'scss/*')
+            .pipe(gulp.dest(appPath+'sass/font-awesome/'));
             ;
         }
     });
@@ -127,7 +127,7 @@ gulp.task('fontawesome-icons', function(){
     
 });
 
-gulp.task('init', ['bootstrap-saas','bootstrap-variables', 'bootstrap-icons', 'fontawesome-style', 'fontawesome-icons']);
+gulp.task('init', ['bootstrap-saas','bootstrap-variables', 'bootstrap-icons', 'fontawesome-sass', 'fontawesome-icons']);
 
 
 //-----------------------------------------------------------------------
@@ -169,6 +169,7 @@ gulp.task('serve', ['sass'], function () {
     gulp.watch("./app/**/*.{html,php}").on('change', browserSync.reload);
     watch('app/img/**/*').on('change', browserSync.reload);
     watch('app/fonts/**/*').on('change', browserSync.reload);
+    watch('app/sass/**/*').on('change', browserSync.reload);
 });
 
 
